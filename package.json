@@ -1,0 +1,43 @@
+{
+  "name": "namadipisci",
+  "version": "1.0.0",
+  "description": "A monorepo of TypeScript tools",
+  "scripts": {
+    "make": "npm run bootstrap && npm run link && npm run build",
+    "clean": "lerna run --concurrency 50 clean",
+    "distclean": "find . -name 'node_modules' -type d -prune -exec rm -r '{}' +",
+    "pin": "DEBUG=pin pin-lerna-package-versions .",
+    "bootstrap": "npm run pin && lerna bootstrap --hoist --strict --force-local",
+    "link": "DEBUG=link typescript-build-linker .",
+    "debug:link": "DEBUG=link npm run link",
+    "build": "tsc -b --incremental --verbose packages",
+    "ava": "lerna run ava",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "lerna:version": "lerna version --conventional-commits --include-merged-tags",
+    "lerna:publish": "lerna publish from-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BraxtonHermann/namadipisci.git"
+  },
+  "keywords": [
+    "delectus",
+    "sed"
+  ],
+  "author": "KirkFerry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BraxtonHermann/namadipisci.git/issues"
+  },
+  "homepage": "https://github.com/BraxtonHermann/namadipisci.git",
+  "devDependencies": {
+    "@typescript-tools/pin-lerna-package-versions": "^3.1.0",
+    "@typescript-tools/typescript-build-linker": "^2.1.3",
+    "@typescript-tools/use-hoisted-version": "^2.0.1",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "lerna": "^3.22.1",
+    "typescript": "^4.0.5"
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "files": [],
+    "references": [
+        {
+            "path": "dependency-graph"
+        },
+        {
+            "path": "find-package"
+        },
+        {
+            "path": "hoisted-packages"
+        },
+        {
+            "path": "internal-dependencies"
+        },
+        {
+            "path": "io-ts"
+        },
+        {
+            "path": "lerna-packages"
+        },
+        {
+            "path": "lerna-utils"
+        },
+        {
+            "path": "link-local-dependencies"
+        },
+        {
+            "path": "monorepo-root"
+        },
+        {
+            "path": "package-manifests"
+        },
+        {
+            "path": "pin-lerna-package-versions"
+        },
+        {
+            "path": "stringify-json"
+        },
+        {
+            "path": "typescript-build-linker"
+        },
+        {
+            "path": "update-lerna-manifest"
+        },
+        {
+            "path": "use-hoisted-version"
+        }
+    ]
+}
